@@ -27,6 +27,14 @@ namespace InventoryMaintence
                     {
                         productList.Add(addFrm.Pro);
                     }
+                    if (addFrm.Sup != null)
+                    {
+                        productList.Add(addFrm.Sup);
+                    }
+                    if (addFrm.Pla != null)
+                    {
+                        productList.Add(addFrm.Pla);
+                    }
                 }
             }
             fillList();

@@ -38,13 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbxManufacturer = new System.Windows.Forms.ComboBox();
+            this.labManuSize = new System.Windows.Forms.Label();
+            this.cbxManuSize = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // rbtPlant
             // 
             this.rbtPlant.AutoSize = true;
+            this.rbtPlant.Checked = true;
             this.rbtPlant.Location = new System.Drawing.Point(124, 12);
             this.rbtPlant.Name = "rbtPlant";
             this.rbtPlant.Size = new System.Drawing.Size(49, 17);
@@ -52,6 +53,7 @@
             this.rbtPlant.TabStop = true;
             this.rbtPlant.Text = "Plant";
             this.rbtPlant.UseVisualStyleBackColor = true;
+            this.rbtPlant.CheckedChanged += new System.EventHandler(this.rbtPlant_CheckedChanged);
             // 
             // rbtSupply
             // 
@@ -60,9 +62,9 @@
             this.rbtSupply.Name = "rbtSupply";
             this.rbtSupply.Size = new System.Drawing.Size(57, 17);
             this.rbtSupply.TabIndex = 1;
-            this.rbtSupply.TabStop = true;
             this.rbtSupply.Text = "Supply";
             this.rbtSupply.UseVisualStyleBackColor = true;
+            this.rbtSupply.CheckedChanged += new System.EventHandler(this.rbtSupply_CheckedChanged);
             // 
             // label1
             // 
@@ -133,36 +135,37 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label4
+            // labManuSize
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Manufacturer:";
+            this.labManuSize.AutoSize = true;
+            this.labManuSize.Location = new System.Drawing.Point(12, 116);
+            this.labManuSize.Name = "labManuSize";
+            this.labManuSize.Size = new System.Drawing.Size(30, 13);
+            this.labManuSize.TabIndex = 10;
+            this.labManuSize.Text = "Size:";
+            this.labManuSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbxManufacturer
+            // cbxManuSize
             // 
-            this.cbxManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxManufacturer.FormattingEnabled = true;
-            this.cbxManufacturer.Items.AddRange(new object[] {
-            "Scotts",
-            "Super",
-            "Good",
-            "Bad"});
-            this.cbxManufacturer.Location = new System.Drawing.Point(91, 113);
-            this.cbxManufacturer.Name = "cbxManufacturer";
-            this.cbxManufacturer.Size = new System.Drawing.Size(121, 21);
-            this.cbxManufacturer.TabIndex = 11;
+            this.cbxManuSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxManuSize.FormattingEnabled = true;
+            this.cbxManuSize.Items.AddRange(new object[] {
+            "1 liter",
+            "2 liter",
+            "1 gallon",
+            "500 ml"});
+            this.cbxManuSize.Location = new System.Drawing.Point(91, 113);
+            this.cbxManuSize.Name = "cbxManuSize";
+            this.cbxManuSize.Size = new System.Drawing.Size(121, 21);
+            this.cbxManuSize.TabIndex = 11;
             // 
             // AddItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 223);
-            this.Controls.Add(this.cbxManufacturer);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbxManuSize);
+            this.Controls.Add(this.labManuSize);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPrice);
@@ -192,7 +195,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbxManufacturer;
+        private System.Windows.Forms.Label labManuSize;
+        private System.Windows.Forms.ComboBox cbxManuSize;
     }
 }
