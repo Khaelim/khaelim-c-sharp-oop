@@ -41,13 +41,13 @@
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.unitPriceTextBox = new System.Windows.Forms.TextBox();
             this.onHandQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             productCodeLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             unitPriceLabel = new System.Windows.Forms.Label();
@@ -56,6 +56,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // productCodeLabel
+            // 
+            productCodeLabel.AutoSize = true;
+            productCodeLabel.Location = new System.Drawing.Point(45, 15);
+            productCodeLabel.Name = "productCodeLabel";
+            productCodeLabel.Size = new System.Drawing.Size(75, 13);
+            productCodeLabel.TabIndex = 1;
+            productCodeLabel.Text = "Product Code:";
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(57, 41);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(63, 13);
+            descriptionLabel.TabIndex = 3;
+            descriptionLabel.Text = "Description:";
+            // 
+            // unitPriceLabel
+            // 
+            unitPriceLabel.AutoSize = true;
+            unitPriceLabel.Location = new System.Drawing.Point(64, 67);
+            unitPriceLabel.Name = "unitPriceLabel";
+            unitPriceLabel.Size = new System.Drawing.Size(56, 13);
+            unitPriceLabel.TabIndex = 5;
+            unitPriceLabel.Text = "Unit Price:";
+            // 
+            // onHandQuantityLabel
+            // 
+            onHandQuantityLabel.AutoSize = true;
+            onHandQuantityLabel.Location = new System.Drawing.Point(25, 93);
+            onHandQuantityLabel.Name = "onHandQuantityLabel";
+            onHandQuantityLabel.Size = new System.Drawing.Size(95, 13);
+            onHandQuantityLabel.TabIndex = 7;
+            onHandQuantityLabel.Text = "On Hand Quantity:";
             // 
             // mMABooksDataSet
             // 
@@ -82,15 +118,6 @@
             this.tableAdapterManager.StatesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CRUDExercise1.MMABooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // productCodeLabel
-            // 
-            productCodeLabel.AutoSize = true;
-            productCodeLabel.Location = new System.Drawing.Point(45, 15);
-            productCodeLabel.Name = "productCodeLabel";
-            productCodeLabel.Size = new System.Drawing.Size(75, 13);
-            productCodeLabel.TabIndex = 1;
-            productCodeLabel.Text = "Product Code:";
-            // 
             // productCodeTextBox
             // 
             this.productCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ProductCode", true));
@@ -98,15 +125,6 @@
             this.productCodeTextBox.Name = "productCodeTextBox";
             this.productCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.productCodeTextBox.TabIndex = 2;
-            // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(57, 41);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 3;
-            descriptionLabel.Text = "Description:";
             // 
             // descriptionTextBox
             // 
@@ -116,15 +134,6 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(100, 20);
             this.descriptionTextBox.TabIndex = 4;
             // 
-            // unitPriceLabel
-            // 
-            unitPriceLabel.AutoSize = true;
-            unitPriceLabel.Location = new System.Drawing.Point(64, 67);
-            unitPriceLabel.Name = "unitPriceLabel";
-            unitPriceLabel.Size = new System.Drawing.Size(56, 13);
-            unitPriceLabel.TabIndex = 5;
-            unitPriceLabel.Text = "Unit Price:";
-            // 
             // unitPriceTextBox
             // 
             this.unitPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitPrice", true));
@@ -133,15 +142,6 @@
             this.unitPriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.unitPriceTextBox.TabIndex = 6;
             // 
-            // onHandQuantityLabel
-            // 
-            onHandQuantityLabel.AutoSize = true;
-            onHandQuantityLabel.Location = new System.Drawing.Point(25, 93);
-            onHandQuantityLabel.Name = "onHandQuantityLabel";
-            onHandQuantityLabel.Size = new System.Drawing.Size(95, 13);
-            onHandQuantityLabel.TabIndex = 7;
-            onHandQuantityLabel.Text = "On Hand Quantity:";
-            // 
             // onHandQuantityTextBox
             // 
             this.onHandQuantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "OnHandQuantity", true));
@@ -149,15 +149,6 @@
             this.onHandQuantityTextBox.Name = "onHandQuantityTextBox";
             this.onHandQuantityTextBox.Size = new System.Drawing.Size(100, 20);
             this.onHandQuantityTextBox.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CRUDExercise1.Properties.Resources.zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(62, 174);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 84);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // btnAdd
             // 
@@ -185,6 +176,7 @@
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -212,6 +204,16 @@
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CRUDExercise1.Properties.Resources.zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 84);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 

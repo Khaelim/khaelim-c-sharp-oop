@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace CRUDExercise1
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        private Form empForm;
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
@@ -26,22 +25,11 @@ namespace CRUDExercise1
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mMABooksDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.mMABooksDataSet.Products);
 
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            empForm = new Form2();
-            empForm.Show();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.productsTableAdapter.Fill(this.mMABooksDataSet.Products);
         }
     }
 }
